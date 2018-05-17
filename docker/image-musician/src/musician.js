@@ -19,18 +19,15 @@ instruments.set("drum", "boum-boum");
 //retrieve the instrument name
 var instrument = process.argv[2];
 
-//retrieve the sound of the instrument
-var sound = instruments.get(instrument);
-
-//if the sound doesn't exist, we quit the process
-if(sound == undefined){
+//if the instrument doesn't exist, we quit the process
+if(instruments.get(instrument) == undefined){
 	process.on('exit', function(){
 		console.log("Invalid instrument");
 		process.exit(1);
 	});
 }
 
-var instrumentMessage = {"uuid":uuid(), "instrument":instrument, "sound":sound, "activeSince":new Date()};
+var instrumentMessage = {"uuid":uuid(), "instrument":instrument, "activeSince":new Date()};
 var JsonToSend = new Buffer(JSON.stringify(instrumentMessage));
 
 var update = function() {
