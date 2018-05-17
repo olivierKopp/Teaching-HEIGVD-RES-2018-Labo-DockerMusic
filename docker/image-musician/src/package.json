@@ -1,0 +1,15 @@
+{
+  "name": "music-musician",
+  "version": "1.0.0",
+  "description": "",
+  "main": "musician.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olivier Kopp",
+  "license": "ISC",
+  "dependencies": {
+    "dgram": "1.0.1",
+    "uuid": "3.2.1"
+  }
+}
