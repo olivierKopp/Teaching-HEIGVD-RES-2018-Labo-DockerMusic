@@ -1,4 +1,4 @@
-FROM node:4.3.1
+FROM node:8.11.2
 MAINTAINER Olivier Kopp <olivier.kopp@heig-vd.ch>
 
 #
